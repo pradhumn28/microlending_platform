@@ -1,0 +1,1375 @@
+{
+  "contractName": "MicrolendingPlatformDetails",
+  "abi": [],
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820ca8a9f615d9130541f3b37d2e7fb023c3e0b5e65600777089d1fd9fcf79d05f20029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820ca8a9f615d9130541f3b37d2e7fb023c3e0b5e65600777089d1fd9fcf79d05f20029",
+  "sourceMap": "27:766:5:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "27:766:5:-;;;;;;;;",
+  "source": "pragma solidity ^0.4.21;\n\n\nlibrary MicrolendingPlatformDetails {\n  struct vcDetails {\n    uint8 interest;\n    uint16 minimumAmount;\n    uint24 maximumAmount;\n    string vcName;\n    address vcAdmin;\n    uint StartDate;\n    uint lastJoinDate;\n    uint EndDate;\n  }\n\n  struct vcDateDetails {\n    uint lastloanDepositeDate;\n    uint lastreimbursementTime;\n  }\n\n  struct membersDetails {\n    address memberAddress;\n    string name;\n    bool verifiedmember;\n  }\n\n  struct vcAccountDetails {\n    uint8 totalMembers;\n    uint32 totalAmountVC;\n    uint32 totalAmountremaining;\n  }\n\n  struct investorDetail {\n    uint24 investAmount;\n    bool investmentApproved;\n  }\n\n  struct loanBorrowerDetail {\n    uint24 loanAmount;\n    uint24 dueAmount;\n    string mortgageCertificate;\n    bool loanAprroved;\n  }\n}\n",
+  "sourcePath": "/home/pradhumn/projects/Blockchain/contracts/MicrolendingPlatformDetails.sol",
+  "ast": {
+    "absolutePath": "/home/pradhumn/projects/Blockchain/contracts/MicrolendingPlatformDetails.sol",
+    "exportedSymbols": {
+      "MicrolendingPlatformDetails": [
+        1122
+      ]
+    },
+    "id": 1123,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1071,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1122,
+        "linearizedBaseContracts": [
+          1122
+        ],
+        "name": "MicrolendingPlatformDetails",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MicrolendingPlatformDetails.vcDetails",
+            "id": 1088,
+            "members": [
+              {
+                "constant": false,
+                "id": 1073,
+                "name": "interest",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "90:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1072,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "90:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1075,
+                "name": "minimumAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "110:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 1074,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "110:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1077,
+                "name": "maximumAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "136:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1076,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1079,
+                "name": "vcName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "162:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1078,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "162:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1081,
+                "name": "vcAdmin",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "181:15:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1080,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "181:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1083,
+                "name": "StartDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "202:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1082,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "202:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1085,
+                "name": "lastJoinDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "222:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1084,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "222:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1087,
+                "name": "EndDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "245:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1086,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "vcDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "67:195:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.vcDateDetails",
+            "id": 1093,
+            "members": [
+              {
+                "constant": false,
+                "id": 1090,
+                "name": "lastloanDepositeDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1093,
+                "src": "293:25:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1089,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "293:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1092,
+                "name": "lastreimbursementTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 1093,
+                "src": "324:26:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1091,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "324:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "vcDateDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "266:89:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.membersDetails",
+            "id": 1100,
+            "members": [
+              {
+                "constant": false,
+                "id": 1095,
+                "name": "memberAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 1100,
+                "src": "387:21:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1094,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "387:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1097,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 1100,
+                "src": "414:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1096,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "414:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1099,
+                "name": "verifiedmember",
+                "nodeType": "VariableDeclaration",
+                "scope": 1100,
+                "src": "431:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1098,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "431:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "membersDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "359:96:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.vcAccountDetails",
+            "id": 1107,
+            "members": [
+              {
+                "constant": false,
+                "id": 1102,
+                "name": "totalMembers",
+                "nodeType": "VariableDeclaration",
+                "scope": 1107,
+                "src": "489:18:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1101,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "489:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1104,
+                "name": "totalAmountVC",
+                "nodeType": "VariableDeclaration",
+                "scope": 1107,
+                "src": "513:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 1103,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "513:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1106,
+                "name": "totalAmountremaining",
+                "nodeType": "VariableDeclaration",
+                "scope": 1107,
+                "src": "539:27:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 1105,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "539:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "vcAccountDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "459:112:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.investorDetail",
+            "id": 1112,
+            "members": [
+              {
+                "constant": false,
+                "id": 1109,
+                "name": "investAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1112,
+                "src": "603:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1108,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "603:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1111,
+                "name": "investmentApproved",
+                "nodeType": "VariableDeclaration",
+                "scope": 1112,
+                "src": "628:23:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1110,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "628:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "investorDetail",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "575:81:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.loanBorrowerDetail",
+            "id": 1121,
+            "members": [
+              {
+                "constant": false,
+                "id": 1114,
+                "name": "loanAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "692:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1113,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "692:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1116,
+                "name": "dueAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "715:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1115,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "715:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1118,
+                "name": "mortgageCertificate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "737:26:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1117,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "737:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1120,
+                "name": "loanAprroved",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "769:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1119,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "769:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "loanBorrowerDetail",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "660:131:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1123,
+        "src": "27:766:5"
+      }
+    ],
+    "src": "0:794:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/pradhumn/projects/Blockchain/contracts/MicrolendingPlatformDetails.sol",
+    "exportedSymbols": {
+      "MicrolendingPlatformDetails": [
+        1122
+      ]
+    },
+    "id": 1123,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1071,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1122,
+        "linearizedBaseContracts": [
+          1122
+        ],
+        "name": "MicrolendingPlatformDetails",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MicrolendingPlatformDetails.vcDetails",
+            "id": 1088,
+            "members": [
+              {
+                "constant": false,
+                "id": 1073,
+                "name": "interest",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "90:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1072,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "90:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1075,
+                "name": "minimumAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "110:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 1074,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "110:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1077,
+                "name": "maximumAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "136:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1076,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1079,
+                "name": "vcName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "162:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1078,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "162:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1081,
+                "name": "vcAdmin",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "181:15:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1080,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "181:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1083,
+                "name": "StartDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "202:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1082,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "202:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1085,
+                "name": "lastJoinDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "222:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1084,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "222:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1087,
+                "name": "EndDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "245:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1086,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "vcDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "67:195:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.vcDateDetails",
+            "id": 1093,
+            "members": [
+              {
+                "constant": false,
+                "id": 1090,
+                "name": "lastloanDepositeDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1093,
+                "src": "293:25:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1089,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "293:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1092,
+                "name": "lastreimbursementTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 1093,
+                "src": "324:26:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1091,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "324:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "vcDateDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "266:89:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.membersDetails",
+            "id": 1100,
+            "members": [
+              {
+                "constant": false,
+                "id": 1095,
+                "name": "memberAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 1100,
+                "src": "387:21:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1094,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "387:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1097,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 1100,
+                "src": "414:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1096,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "414:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1099,
+                "name": "verifiedmember",
+                "nodeType": "VariableDeclaration",
+                "scope": 1100,
+                "src": "431:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1098,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "431:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "membersDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "359:96:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.vcAccountDetails",
+            "id": 1107,
+            "members": [
+              {
+                "constant": false,
+                "id": 1102,
+                "name": "totalMembers",
+                "nodeType": "VariableDeclaration",
+                "scope": 1107,
+                "src": "489:18:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1101,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "489:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1104,
+                "name": "totalAmountVC",
+                "nodeType": "VariableDeclaration",
+                "scope": 1107,
+                "src": "513:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 1103,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "513:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1106,
+                "name": "totalAmountremaining",
+                "nodeType": "VariableDeclaration",
+                "scope": 1107,
+                "src": "539:27:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 1105,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "539:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "vcAccountDetails",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "459:112:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.investorDetail",
+            "id": 1112,
+            "members": [
+              {
+                "constant": false,
+                "id": 1109,
+                "name": "investAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1112,
+                "src": "603:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1108,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "603:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1111,
+                "name": "investmentApproved",
+                "nodeType": "VariableDeclaration",
+                "scope": 1112,
+                "src": "628:23:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1110,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "628:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "investorDetail",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "575:81:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MicrolendingPlatformDetails.loanBorrowerDetail",
+            "id": 1121,
+            "members": [
+              {
+                "constant": false,
+                "id": 1114,
+                "name": "loanAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "692:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1113,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "692:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1116,
+                "name": "dueAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "715:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1115,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "715:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1118,
+                "name": "mortgageCertificate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "737:26:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1117,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "737:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1120,
+                "name": "loanAprroved",
+                "nodeType": "VariableDeclaration",
+                "scope": 1121,
+                "src": "769:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1119,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "769:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "loanBorrowerDetail",
+            "nodeType": "StructDefinition",
+            "scope": 1122,
+            "src": "660:131:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1123,
+        "src": "27:766:5"
+      }
+    ],
+    "src": "0:794:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-13T18:15:24.256Z"
+}
